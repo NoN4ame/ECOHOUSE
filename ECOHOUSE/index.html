@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECOHAUS</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="feedBack">
+    <h1>Оставьте заявку, и с Вами свяжется нам менеджер</h1>
+    <button onclick="closeForm()" class="feedBack__close-form"><img src="img/close.svg" alt="#"></button>
+    <form action="#">
+        <ul>
+            <li>
+                <label id="name">
+                    <input class="feedBack__enterText" name="name" type="text" placeholder="Имя">
+                    <small class="error">Имя должно содержать только буквы</small>
+                </label>
+            </li>
+            <li>
+                <label id="phone">
+                    <input class="feedBack__enterText" name="phone" type="number" placeholder="Номер телефона">
+                    <small class="error">Введите номер в формате +7(000)000-00-00</small>
+                </label>
+            </li>
+            <li><input class="feedBack__checkbox" id="check" type="checkbox">
+                <label for="check">Я согласен с условиями конфиденциальности</label>
+            </li>
+            <li>
+                <button class="feedBack__btn" >Записаться на просмотр</button>
+            </li>
+        </ul>
+    </form>
+</div> <!-- Форма обратной связи(Скрыта) -->
+<!-- Основной контент страницы -->
+<header class="header">
+    <div class="container header__content">
+        <div class="header__content__left">
+            <h1 class="logo"><a href="index.html">ECOHAUS</a></h1>
+            <ul class="header__content__left__menu">
+                <li><a class="header__content__left__menu__text" href="index.html">Компания</a></li>
+                <li><a class="header__content__left__menu__text" href="projects.html">Проекты</a></li>
+                <li><a class="header__content__left__menu__text" href="price.html">Цены и комплектации</a></li>
+                <li><a class="header__content__left__menu__text" href="#">Контакты</a></li>
+            </ul>
+            <img src="img/phone.svg" alt="cell-phone">
+            <p class="header__content__left__phone-number">+7 (800) 800 80 80</p>
+            <button onclick="feedBack()" class="btn">Связаться с нами</button>
+        </div>
+        <div class="header__content__right">
+            <div class="header__content__right__info">
+                <div class="header__content__right__statick">
+                    <h1 class="header__content__right__name">ECOHAUS</h1>
+                    <p class="header__content__right__text">Строим более 10 лет современные Экодома <br> с
+                        панорамным
+                        остеклением</p>
+                    <a href="projects.html">
+                        <button class="btn header__content__right__btn">Смотреть проекты</button>
+                    </a>
+                </div>
+                <div class="owl-carousel-second">
+                    <div class="fadeOut">
+                        <img class="slides" src="img/slide1.png" alt="slide_1">
+                        <p class="header__content__right__number">01<span>/03</span></p>
+                        <div class="header__content__right__about-house">
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Название</li>
+                                <li class="header__content__right__about-house__value">Лесник</li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Стоимость</li>
+                                <li class="header__content__right__about-house__value">от 14 000 р./м<sup>2</sup></li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Материалы</li>
+                                <li class="header__content__right__about-house__value">Доска &laquo;Дерево&raquo;</li>
+                            </ul>
+                        </div>
+                        <div class="header__content__right__slide">
+                            <button class="right_nav header__content__right__arrow"><img
+                                    src="img/left-arrow.svg" alt="previously">
+                            </button>
+                            <button class="left_nav header__content__right__arrow"><img
+                                    src="img/right-arrow.svg" alt="next">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fadeOut">
+                        <img class="slides" src="img/slide2.png" alt="slide_1">
+                        <p class="header__content__right__number">02<span>/03</span></p>
+                        <div class="header__content__right__about-house">
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Название</li>
+                                <li class="header__content__right__about-house__value">Офис</li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Стоимость</li>
+                                <li class="header__content__right__about-house__value">от 15 000 р./м<sup>2</sup></li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Материалы</li>
+                                <li class="header__content__right__about-house__value">Доска &laquo;Панель&raquo;</li>
+                            </ul>
+                        </div>
+                        <div class="header__content__right__slide">
+                            <button class="right_nav header__content__right__arrow"><img
+                                    src="img/left-arrow.svg" alt="previously">
+                            </button>
+                            <button class="left_nav header__content__right__arrow"><img
+                                    src="img/right-arrow.svg" alt="next">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fadeOut">
+                        <img class="slides" src="img/slide3.png" alt="slide_1">
+                        <p class="header__content__right__number">03<span>/03</span></p>
+                        <div class="header__content__right__about-house">
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Название</li>
+                                <li class="header__content__right__about-house__value">Домино</li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Стоимость</li>
+                                <li class="header__content__right__about-house__value">от 14 000 р./м<sup>2</sup></li>
+                            </ul>
+                            <ul>
+                                <li class="header__content__right__about-house__nomination">Материалы</li>
+                                <li class="header__content__right__about-house__value">Доска &laquo;Штиль&raquo;</li>
+                            </ul>
+                        </div>
+                        <div class="header__content__right__slide">
+                            <button class="right_nav header__content__right__arrow">
+                                <img src="img/left-arrow.svg" alt="previously">
+                            </button>
+                            <button class="left_nav header__content__right__arrow">
+                                <img
+                                        src="img/right-arrow.svg" alt="next">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__content__right__social">
+                    <ul>
+                        <li><a href="https://www.twitter.com/"><img src="img/twitter.svg" alt="twitter"></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="img/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="https://www.youtube.com/"><img src="img/youtube.svg" alt="youtube"></a></li>
+                        <li><img class="header__content__right__social__arrow" src="img/arrow.svg"
+                                 alt="arrow"></li>
+                        <li><p class="header__content__right__social__text">Мы в соцсетях</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container main__content">
+        <div class="main__content__about-house">
+            <div class="main__content__about-house__upper">
+                <img src="img/about-houseUpper.jpg" alt="house">
+                <section class="main__content__about-house__upper__right">
+                    <h1 class="headers">Чем хороши дома от ECOHAUS ?</h1>
+                    <ul>
+                        <li><img src="img/plus.svg" alt="">Пригодны для комфортного круглогодичного проживания</li>
+                        <li><img src="img/plus.svg" alt="">Долговечные материалы</li>
+                        <li><img src="img/plus.svg" alt="">Индивидуальная планировка</li>
+                        <li><img src="img/plus.svg" alt="">Строим под ключ за 90 дней</li>
+                        <li><img src="img/plus.svg" alt="">Гарантия 5 лет</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="main__content__about-house__lower">
+                <section class="main__content__about-house__lower__left">
+                    <p>Для строительства домов мы всегда используем только качественное, тщательно отобранное дерево.
+                        Поставщиками являются проверенные деревообрабатывающие заводы, с которыми мы сотрудничаем уже
+                        много лет, и всецело доверяем их продукции. <br> <br>
+                        Мы официальные представители двух деревообрабатывающих заводов из Москвы и Вологодской области.
+                        На обоих предприятиях используется самое современное оборудование с числовым программным
+                        управлением (Hundegger К2, Hundegger PBA, Krusi, Reх, Weinig). Это позволяет производить
+                        полностью готовые к сборке деревянные домокомплекты со всеми запилами и чашками.
+                    </p>
+                    <a href="projects.html">
+                        <button class="btn main__content__about-house__lower__left__button">
+                            Подробнее<img src="img/rightArrow-button.svg" alt="next">
+                        </button>
+                    </a>
+                </section>
+                <section class="main__content__about-house__lower__right">
+                    <img src="img/projectWood.png" alt="house">
+                </section>
+            </div>
+        </div>
+        <div class="main__content__projects">
+            <div class="main__content__projects__text">
+                <h1 class="headers">Выполненные проекты</h1>
+                <a href="https://www.instagram.com/">Больше фото в Instagram
+                    <img src="img/rightArrow-button.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="container2 main__content__projects__photo">
+        <div class="main__content__projects__photo__upper">
+            <div><img src="img/photoUpperLeft.jpg" alt=""></div>
+            <div><img src="img/photoUpperMidl.jpg" alt=""></div>
+            <div><img src="img/photoUpperRight.jpg" alt=""></div>
+        </div>
+        <div class="main__content__projects__photo__lower">
+            <div class="main__content__projects__photo__lower__left">
+                <img src="img/photoLowerLeft.jpg" width="394px" alt="">
+            </div>
+            <div><img src="img/photoLowerSecondLeft.jpg" alt=""></div>
+            <div><img src="img/photoLowerSecondRight.jpg" height="318px" alt=""></div>
+            <div><img src="img/photoLowerRight.jpg" width="473px" height="318px" alt=""></div>
+        </div>
+    </div>
+    <div class="container main__content__partners">
+        <h1 class="headers">Партнеры</h1>
+        <ul>
+            <li class="main__content__partners__alfabank"><img src="img/alfabank.png" alt=""></li>
+            <li class="main__content__partners__gazprom"><img src="img/gazprom.png" alt=""></li>
+            <li class="main__content__partners__pik"><img src="img/pik.png" alt=""></li>
+            <li class="main__content__partners__sberbank"><img src="img/sberbank.png" alt=""></li>
+            <li class="main__content__partners__cian"><img src="img/cian.png" alt=""></li>
+            <li class="main__content__partners__tinkoff"><img src="img/tinkoff.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="container2 main__content__form">
+        <h1 class="headers">Оставьте заявку на экскурсию</h1>
+        <form action="#">
+            <ul>
+                <li>
+                    <label id="name2">
+                        <input class="feedBack__enterText" name="name" type="text" placeholder="Имя">
+                        <small class="error">Имя должно содержать только буквы</small>
+                    </label>
+                </li>
+                <li>
+                    <label id="phone2">
+                        <input class="feedBack__enterText" name="phone" type="number" placeholder="Номер телефона">
+                        <small class="error">Введите номер в формате +7 (000) 000 00 00</small>
+                    </label>
+                </li>
+                <li><input class="main__content__form__checkbox" id="agree" type="checkbox">
+                    <label for="agree">Я согласен с условиями конфиденциальности</label>
+                </li>
+                <li>
+                    <button class="btn main__content__form__btn">Записаться на просмотр</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="container main__content__contacts">
+        <h1 class="headers">Контакты</h1>
+        <ul>
+            <li class="main__content__contacts__upper">Телефон
+                <ul>
+                    <li class="main__content__contacts__lower">+7 (800) 800 80 80</li>
+                </ul>
+            </li>
+            <li class="main__content__contacts__upper">Режим работы
+                <ul>
+                    <li class="main__content__contacts__lower">Пн-Пт с 8:00 до 20:00 <br>
+                        Сб-Вс с 10:00 до 18:00
+                    </li>
+                </ul>
+            </li>
+            <li class="main__content__contacts__upper">Электронная почта
+                <ul>
+                    <li class="main__content__contacts__lower">ecohausinfo@mail.ru</li>
+                </ul>
+            </li>
+            <li class="main__content__contacts__upper">Социальные сети
+                <ul>
+                    <li class="main__content__contacts__lower">
+                        <a href="#"><img src="img/twitterContacts.jpg" alt=""></a>
+                        <a href="#"><img src="img/instagramContacts.jpg" alt=""></a>
+                        <a href="#"><img src="img/facebookContacts.jpg" alt=""></a>
+                        <a href="#"><img src="img/youtubeContacts.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container2 main__content__map">
+        <h1 class="headers">Карта проезда</h1>
+        <a href="https://www.google.com/maps/place/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%9F%D0%B5%D1%85%D1%80%D0%B0+-+%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5,+%D0%9B%D0%B5%D0%BE%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+143900/@55.797554,37.929132,5027m/data=!3m1!1e3!4m5!3m4!1s0x414acc72995d626b:0x7870eb913c311338!8m2!3d55.7897904!4d37.9506259?hl=ru"
+           target="_blank">
+            <img src="img/map.jpg" alt="map">
+        </a>
+        <ul>
+            <li><p><b>Офис:</b> Москва, ул. Радио 24к1, офис 401, БЦ Яуза Тауэрс</p></li>
+            <li>
+                <button class="btn">Построить маршрут</button>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container footer__content">
+        <a href="index.html"><h1 class="logo footer__content__logo">ECOHAUS</h1></a>
+        <ul>
+            <li><a class="footer__content__nav" href="index.html">Компания</a></li>
+            <li><a class="footer__content__nav" href="projects.html">Проекты</a></li>
+            <li><a class="footer__content__nav" href="price.html">Цены и комплектации</a></li>
+            <li><a class="footer__content__nav" href="#">Контакты</a></li>
+        </ul>
+        <img src="img/whitePhone.svg" alt="cell-phone">
+        <p class="footer__content__phone-number">+7 (800) 800 80 80</p>
+        <button onclick="feedBack()" class="btn footer__content__btn">Связаться с нами</button>
+    </div>
+</footer>
+<script src="js/validation.js"></script>
+</body>
+</html>
