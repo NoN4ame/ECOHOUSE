@@ -1,0 +1,82 @@
+.feedBack
+  font-family: Roboto, sans-serif
+  position: fixed
+  width: 739px
+  background-color: #3a3a3a
+  text-align: center
+  padding-top: 48px
+  z-index: 999
+  top: 30%
+  left: 29%
+  display: none
+  &>form>ul
+    list-style-type: none
+    padding-right: 7px
+  &>h1
+    font-size: 24px
+    font-weight: bold
+    color: #cecece
+    margin-bottom: 21px
+    padding-right: 16px
+  &__enterText
+    border: none
+    width: 335px
+    font-size: 14px
+    color: #cecece
+    padding-bottom: 7px
+    margin-bottom: 6.5px
+    border-bottom: 1px solid #ffffff
+    background-color: transparent
+    outline: none
+    &::placeholder
+      color: #cecece
+  &__checkbox
+    border-bottom: none
+    width: auto
+    position: absolute
+    z-index: -1
+    opacity: 0
+    background-color: #ffffff
+    &+label
+      position: relative
+      align-items: center
+      padding-left: 27px
+      font-size: 14px
+      color: #cecece
+      &:before
+        content: ''
+        display: block
+        width: 13px
+        height: 13px
+        border: 1px solid #3a3a3a
+        position: absolute
+        left: 0
+        top: 0
+        cursor: pointer
+        background-color: #ffffff
+    &:checked
+      &+label
+        &::before
+          border-color: #0b76ef
+          background-color: #0b76ef
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  &__btn
+    margin-top: 23px
+    margin-bottom: 50px
+    border: solid 1px #3a3a3a
+    font-size: 14px
+    font-weight: bold
+    color: #3a3a3a
+    padding: 18px 85px
+    background-color: #ffffff
+    outline: none
+    cursor: pointer
+    transition: none!important
+  &__close-form
+    position: relative
+    bottom: 83px
+    left: 346px
+    cursor: pointer
+    border: 1px
+    background-color: transparent
+    outline: none
