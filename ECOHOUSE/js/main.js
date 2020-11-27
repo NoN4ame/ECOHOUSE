@@ -35,8 +35,9 @@ $(document).ready(function () {
     $('#prev').click(() => setActiveImage(currentIndex - 1)); // Переключатель назад
     $('#next').click(() => setActiveImage(currentIndex + 1)); // Переключатель вперед
     setActiveImage(0);
-    //
-//Сортировка
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Сортировка
     let elem = $(".main__content__found__house"); //Блок с сортируемыми элементами
     $("#sort").on('click', function () {
         if ($("#sort").val() === 'price') {
@@ -65,8 +66,15 @@ $(document).ready(function () {
         //Сброс фильтра
         if (cat === 'сброс') {
             $('[data-cat]').removeClass('hide','active')
+            //Сбрасываем кол-во проектов
+            $(".main__content__sortBy__right__sortResult").html(`${allProjects} проектов`)
         }
     })
+    //Отрисовка кол-ва проектов
+    let allProjects = $('.main__content__found__house').length
+    $(".main__content__sortBy__right__sortResult").html(`${allProjects} проектов`)
+    ////
+
     // Работа фильтрации по нажатию
     let submit = $("[data-submit]");
     submit.on("click", function () {
@@ -86,9 +94,23 @@ $(document).ready(function () {
                 $(this).removeClass("hide"); // Если все сравнения дают true рендерим карточки товара(удаляем класс hide)
             } else $(this).addClass("hide"); // Если хоть одно значение дает false скрываем карточки не подходящие по
         });                                  // критерия поиска( добавляем класс hide)
+        // Отрисовка отфильтрованного кол-ва проектов
+        let hideProjects = $('.main__content__found > .hide').length,
+            difference = allProjects - hideProjects, // Высчитываем разность между всеми проектами и скрытыми проектами
+            message = $(".main__content__sortBy__right__sortResult")
+        if (difference === 0) {
+            message.html(`${difference} проектов`)
+        } else if (difference === 1){
+            message.html(`${difference} проект`)
+        } else if (difference <= 4) {
+            message.html(`${difference} проекта`)
+        } else if (difference <= 20) {
+            message.html(`${difference} проектов`)
+        }
+
     });
 
-// Создаем переменную для класса карусели и настраиваем плагин
+    // Создаем переменную для класса карусели и настраиваем плагин
     let owl = $(".owl-carousel");
     let owl2 = $(".owl-carousel-second")
     let slide1 = $("#slide1"); //1 лента "Комплектация до 2 000 000"
@@ -97,7 +119,7 @@ $(document).ready(function () {
     //Настройки карусели
     owl.owlCarousel({
         loop: true,
-        margin: 130,
+        margin: 128,
         mouseDrag: false,
         nav: false,
         dots: false
@@ -132,7 +154,7 @@ $(document).ready(function () {
     // Удаление встроенных классов(Стрелки навигации и точки навигации)
     $(".owl-nav,.owl-dots").remove()
 })
-// Функции для формы обратной связи
+    // Функции для формы обратной связи
     function feedBack() {
         $('.feedBack').css('display', 'block')
         $('.container,.container2').css({
@@ -142,11 +164,10 @@ $(document).ready(function () {
         })
     }
 
-// Функция закрытия формы обратной связи
+    // Функция закрытия формы обратной связи
     function closeForm() {
         $('.feedBack').css('display', 'none')
         $('.container,.container2').css('filter', 'none')
     }
 
-// Фильтрация
 
