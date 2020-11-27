@@ -77,23 +77,26 @@ $(document).ready(function () {
 
     // Работа фильтрации по нажатию
     let submit = $("[data-submit]");
-    submit.on("click", function () {
+    submit.on("click", function (e) {
         let roomSearch = parseInt($("#rooms").val()); // Получаем значение комнат и меняем тип на number
         let floor = parseInt($("#floors").val()); // Получаем значение этажей и меняем тип на number
-        $("[data-room][data-floor][data-price][data-cat]").each(function () { // Перебираем все дата атрибуты
-            let roomHave = $(this).data("room"); // Значение атрибута комнат
-            let floorsHave = $(this).data("floor"); // Значение атрибута этажей
-            let priceHave = $(this).data("price"); // Значение атрибута цены
-            let cat = $(this).data('cat'); // Значение атрибута категории
-            let category = $('.filter-projects__param__left > ul > li.active').html() // Получаем значение эл-та у которого класс active
-            let maxPrice = parseInt($('#max_price').val().replace(/\s/g, '')); // Делаем пробелы между разрядами
-            let minPrice = parseInt($('#min_price').val().replace(/\s/g, '')); // и преобразуем в number для сравнения
-            if (roomHave === roomSearch && floorsHave === floor // Сравниваем значения дата атрибутов и значения в инпутах
-                && (priceHave > minPrice && priceHave < maxPrice)
-                && (cat === category)) {
-                $(this).removeClass("hide"); // Если все сравнения дают true рендерим карточки товара(удаляем класс hide)
-            } else $(this).addClass("hide"); // Если хоть одно значение дает false скрываем карточки не подходящие по
-        });                                  // критерия поиска( добавляем класс hide)
+        if ($(".filter-projects__param__left > ul > li").hasClass('active')) { // Проверяем выбрана ли категория
+            $("[data-room][data-floor][data-price][data-cat]").each(function () { // Перебираем все дата атрибуты
+                let roomHave = $(this).data("room"); // Значение атрибута комнат
+                let floorsHave = $(this).data("floor"); // Значение атрибута этажей
+                let priceHave = $(this).data("price"); // Значение атрибута цены
+                let cat = $(this).data('cat'); // Значение атрибута категории
+                let category = $('.filter-projects__param__left > ul > li.active').html() // Получаем значение эл-та у которого класс active
+                let maxPrice = parseInt($('#max_price').val().replace(/\s/g, '')); // Делаем пробелы между разрядами
+                let minPrice = parseInt($('#min_price').val().replace(/\s/g, '')); // и преобразуем в number для сравнения
+                if (roomHave === roomSearch && floorsHave === floor // Сравниваем значения дата атрибутов и значения в инпутах
+                    && (priceHave > minPrice && priceHave < maxPrice)
+                    && (cat === category)) {
+                    $(this).removeClass("hide"); // Если все сравнения дают true рендерим карточки товара(удаляем класс hide)
+                } else $(this).addClass("hide")  // Если хоть одно значение дает false скрываем карточки не подходящие по
+            })                                   // критерия поиска( добавляем класс hide)
+
+        } else alert('Выберете категорию')     //Если категорию не выбрана, выводим сообщение об этом
         // Отрисовка отфильтрованного кол-ва проектов
         let hideProjects = $('.main__content__found > .hide').length,
             difference = allProjects - hideProjects, // Высчитываем разность между всеми проектами и скрытыми проектами
