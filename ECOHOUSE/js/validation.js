@@ -11,7 +11,7 @@ function validation(event) {
     // Условия при которых будет происходить валидация
     if ((regexp_name.test(name) !== true)
         || (regexp_phone.test(phone) !== true)
-        || phone.length < 10 ){
+        || phone.length <= 10 ){
         document.getElementById('name').className = 'error_val';
         document.getElementById('phone').className = 'error_val';
         event.preventDefault()
@@ -31,7 +31,7 @@ function validation2(event) {
     // Условия при которых будет происходить валидация
     if ((regexp_name.test(name2) !== true)
         || (regexp_phone.test(phone2) !== true)
-        || phone2.length < 10){
+        || phone2.length <= 10){
         document.getElementById('name2').className = 'error_val';
         document.getElementById('phone2').className = 'error_val';
         event.preventDefault()
