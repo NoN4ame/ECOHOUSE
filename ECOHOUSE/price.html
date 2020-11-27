@@ -15,13 +15,23 @@
     <button onclick="closeForm()" class="feedBack__close-form"><img src="img/close.svg" alt="#"></button>
     <form action="#">
         <ul>
-            <li><input class="feedBack__enterText" type="text" placeholder="Имя"></li>
-            <li><input class="feedBack__enterText" type="text" placeholder="Номер телефона"></li>
+            <li>
+                <label id="name">
+                    <input class="feedBack__enterText" name="name" type="text" placeholder="Имя">
+                    <small class="error">Имя должно содержать только буквы</small>
+                </label>
+            </li>
+            <li>
+                <label id="phone">
+                    <input class="feedBack__enterText" name="phone" type="number" placeholder="Номер телефона">
+                    <small class="error">Введите номер в формате +7(000)000-00-00</small>
+                </label>
+            </li>
             <li><input class="feedBack__checkbox" id="check" type="checkbox">
                 <label for="check">Я согласен с условиями конфиденциальности</label>
             </li>
             <li>
-                <button class="feedBack__btn" type="submit">Записаться на просмотр</button>
+                <button class="feedBack__btn">Записаться на просмотр</button>
             </li>
         </ul>
     </form>
@@ -36,7 +46,7 @@
                     <li><a class="header__content__nav" href="index.html">Компания</a></li>
                     <li><a class="header__content__nav" href="projects.html">Проекты</a></li>
                     <li><a class="header__content__nav" href="price.html">Цены и комплектации</a></li>
-                    <li><a class="header__content__nav" href="#">Контакты</a></li>
+                    <li><a class="header__content__nav" href="contact.html">Контакты</a></li>
                 </ul>
             </section>
             <section class="header__content__right">
@@ -73,81 +83,85 @@
                 </section>
             </div>
             <div id="slide1" class="owl-carousel main__content__found price__content__filter">
-                <ul class="main__content__found__house">
+                <ul class="main__content__found__house" data-cat="Базовая" data-room="3" data-floor="1"
+                    data-price="2000000">
                     <li>
-                        <img src="img/about-houseLower.png" alt="">
+                        <img src="img/projectIce.jpg" alt="house">
                         <div class="main__content__found__about-house">
                             <section class="main__content__found__about-house__left-side">
-                                <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                                <p class="main__content__found__about-house__text">4 комнаты</p>
+                                <p class="main__content__found__about-house__text-bold">100 м2</p>
+                                <p class="main__content__found__about-house__text">3 комнаты</p>
                                 <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                                <p class="main__content__found__about-house__text-bold">2 000 000 руб.</p>
                                 <a href="aboutProject.html">
                                     <button class="btn">Описание проекта</button>
                                 </a>
                             </section>
                             <section class="main__content__found__about-house__right-side">
-                                <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                                <p class="main__content__found__about-house__text">2 этажа</p>
+                                <p class="main__content__found__about-house__text-bold">Проект «Ледник»</p>
+                                <p class="main__content__found__about-house__text">1 этаж</p>
                                 <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
+                                <button onclick="feedBack()" class=" btn">Условия покупки</button>
                             </section>
                         </div>
                     </li>
                 </ul>
-                <ul class="main__content__found__house">
+                <ul class="main__content__found__house" data-cat="Базовая" data-room="4" data-floor="1"
+                    data-price="2250000">
                     <li>
-                        <img src="img/about-houseLower.png" alt="">
+                        <img src="img/projectRuby.jpg" alt="">
                         <div class="main__content__found__about-house">
                             <section class="main__content__found__about-house__left-side">
-                                <p class="size main__content__found__about-house__text-bold">130 м2</p>
+                                <p class="main__content__found__about-house__text-bold">120 м2</p>
                                 <p class="main__content__found__about-house__text">4 комнаты</p>
                                 <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                                <p class="main__content__found__about-house__text-bold">2 250 000 руб.</p>
                                 <a href="aboutProject.html">
                                     <button class="btn">Описание проекта</button>
                                 </a>
                             </section>
                             <section class="main__content__found__about-house__right-side">
-                                <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                                <p class="main__content__found__about-house__text">2 этажа</p>
-                                <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
+                                <p class="main__content__found__about-house__text-bold">Проект «Рубин»</p>
+                                <p class="main__content__found__about-house__text">1 этаж</p>
+                                <p class="main__content__found__about-house__text">60 дней</p>
+                                <button onclick="feedBack()" class=" btn">Условия покупки</button>
                             </section>
                         </div>
                     </li>
                 </ul>
-                <ul class="main__content__found__house">
+                <ul class="main__content__found__house" data-cat="Домокомплект" data-room="5" data-floor="2"
+                    data-price="2350000">
                     <li>
-                        <img src="img/about-houseLower.png" alt="">
+                        <img src="img/projectGate.jpg" alt="house">
                         <div class="main__content__found__about-house">
                             <section class="main__content__found__about-house__left-side">
-                                <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                                <p class="main__content__found__about-house__text">4 комнаты</p>
-                                <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                                <p class="main__content__found__about-house__text-bold">140 м2</p>
+                                <p class="main__content__found__about-house__text">5 комнат</p>
+                                <p class="main__content__found__about-house__text">2 санузел</p>
+                                <p class="main__content__found__about-house__text-bold">2 700 000 руб.</p>
                                 <a href="aboutProject.html">
                                     <button class="btn">Описание проекта</button>
                                 </a>
                             </section>
                             <section class="main__content__found__about-house__right-side">
-                                <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
+                                <p class="main__content__found__about-house__text-bold">Проект «Врата»</p>
                                 <p class="main__content__found__about-house__text">2 этажа</p>
-                                <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
+                                <p class="main__content__found__about-house__text">60 дней</p>
+                                <button onclick="feedBack()" class=" btn">Условия покупки</button>
                             </section>
                         </div>
                     </li>
                 </ul>
-                <ul class="main__content__found__house">
+                <ul class="main__content__found__house" data-cat="Домокомплект" data-room="5" data-floor="2"
+                    data-price="2450000">
                     <li>
-                        <img src="img/about-houseLower.png" alt="">
+                        <img src="img/projectWood.png" alt="house">
                         <div class="main__content__found__about-house">
                             <section class="main__content__found__about-house__left-side">
                                 <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                                <p class="main__content__found__about-house__text">4 комнаты</p>
+                                <p class="main__content__found__about-house__text">5 комнаты</p>
                                 <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                                <p class="main__content__found__about-house__text-bold">2 400 000 руб.</p>
                                 <a href="aboutProject.html">
                                     <button class="btn">Описание проекта</button>
                                 </a>
@@ -156,51 +170,7 @@
                                 <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
                                 <p class="main__content__found__about-house__text">2 этажа</p>
                                 <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
-                            </section>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="main__content__found__house">
-                    <li>
-                        <img src="img/about-houseLower.png" alt="">
-                        <div class="main__content__found__about-house">
-                            <section class="main__content__found__about-house__left-side">
-                                <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                                <p class="main__content__found__about-house__text">4 комнаты</p>
-                                <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
-                                <a href="aboutProject.html">
-                                    <button class="btn">Описание проекта</button>
-                                </a>
-                            </section>
-                            <section class="main__content__found__about-house__right-side">
-                                <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                                <p class="main__content__found__about-house__text">2 этажа</p>
-                                <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
-                            </section>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="main__content__found__house">
-                    <li>
-                        <img src="img/about-houseLower.png" alt="">
-                        <div class="main__content__found__about-house">
-                            <section class="main__content__found__about-house__left-side">
-                                <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                                <p class="main__content__found__about-house__text">4 комнаты</p>
-                                <p class="main__content__found__about-house__text">1 санузел</p>
-                                <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
-                                <a href="aboutProject.html">
-                                    <button class="btn">Описание проекта</button>
-                                </a>
-                            </section>
-                            <section class="main__content__found__about-house__right-side">
-                                <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                                <p class="main__content__found__about-house__text">2 этажа</p>
-                                <p class="main__content__found__about-house__text">30 дней</p>
-                                <button onclick="feedBack()" class="btn">Условия покупки</button>
+                                <button onclick="feedBack()" class=" btn">Условия покупки</button>
                             </section>
                         </div>
                     </li>
@@ -217,13 +187,14 @@
             </section>
         </div>
         <div id="slide2" class="owl-carousel main__content__found price__content__filter">
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Домокомплект" data-room="5" data-floor="2"
+                data-price="2500000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectSky.jpg" alt="house">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
+                            <p class="size main__content__found__about-house__text-bold">140 м2</p>
+                            <p class="main__content__found__about-house__text">5 комнаты</p>
                             <p class="main__content__found__about-house__text">1 санузел</p>
                             <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
                             <a href="aboutProject.html">
@@ -231,98 +202,79 @@
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
+                            <p class="main__content__found__about-house__text-bold">Проект «Небо»</p>
                             <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Домокомплект" data-room="5" data-floor="1"
+                data-price="2600000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectAsia.png" alt="">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">160 м2</p>
+                            <p class="main__content__found__about-house__text">5 комнаты</p>
+                            <p class="main__content__found__about-house__text">2 санузел</p>
+                            <p class="main__content__found__about-house__text-bold">2 600 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Азия»</p>
+                            <p class="main__content__found__about-house__text">1 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Домокомплект" data-room="4" data-floor="2"
+                data-price="2800000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectClassic.png" alt="">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
+                            <p class="main__content__found__about-house__text-bold">120 м2</p>
                             <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text">2 санузел</p>
+                            <p class="main__content__found__about-house__text-bold">2 800 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Классика»</p>
+                            <p class="main__content__found__about-house__text">2 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Домокомплект" data-room="5" data-floor="2"
+                data-price="2900000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectEast.jpg" alt="house">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">140 м2</p>
+                            <p class="main__content__found__about-house__text">5 комнат</p>
+                            <p class="main__content__found__about-house__text">2 санузел</p>
+                            <p class="main__content__found__about-house__text-bold">2 900 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
-                        </section>
-                    </div>
-                </li>
-            </ul>
-            <ul class="main__content__found__house">
-                <li>
-                    <img src="img/about-houseLower.png" alt="">
-                    <div class="main__content__found__about-house">
-                        <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
-                            <a href="aboutProject.html">
-                                <button class="btn">Описание проекта</button>
-                            </a>
-                        </section>
-                        <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Восток»</p>
+                            <p class="main__content__found__about-house__text">2 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
@@ -338,134 +290,94 @@
             </section>
         </div>
         <div id="slide3" class="owl-carousel main__content__found price__content__filter">
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Под ключ" data-room="5" data-floor="1"
+                data-price="3000000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectForester.jpg" alt="house">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
+                            <p class="main__content__found__about-house__text-bold">130 м2</p>
+                            <p class="main__content__found__about-house__text">5 комнаты</p>
                             <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">3 000 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Лесник»</p>
+                            <p class="main__content__found__about-house__text">2 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Под ключ" data-room="3" data-floor="1"
+                data-price="3200000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectOffice.png" alt="house">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
+                            <p class="main__content__found__about-house__text-bold">150 м2</p>
+                            <p class="main__content__found__about-house__text">3 комнаты</p>
                             <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">3 200 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
+                            <p class="main__content__found__about-house__text-bold">Проект «Офис»</p>
+                            <p class="main__content__found__about-house__text">1 этаж</p>
                             <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Под ключ" data-room="7" data-floor="1"
+                data-price="3500000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectDomino.png" alt="">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">156 м2</p>
+                            <p class="main__content__found__about-house__text">7 комнаты</p>
+                            <p class="main__content__found__about-house__text">2 санузел</p>
+                            <p class="main__content__found__about-house__text-bold">3 500 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Домино»</p>
+                            <p class="main__content__found__about-house__text">1 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
             </ul>
-            <ul class="main__content__found__house">
+            <ul class="main__content__found__house" data-cat="Под ключ" data-room="6" data-floor="2"
+                data-price="3800000">
                 <li>
-                    <img src="img/about-houseLower.png" alt="">
+                    <img src="img/projectEurope.png" alt="">
                     <div class="main__content__found__about-house">
                         <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
+                            <p class="main__content__found__about-house__text-bold">130 м2</p>
+                            <p class="main__content__found__about-house__text">6 комнаты</p>
+                            <p class="main__content__found__about-house__text">2 санузел</p>
+                            <p class="main__content__found__about-house__text-bold">3 800 000 руб.</p>
                             <a href="aboutProject.html">
                                 <button class="btn">Описание проекта</button>
                             </a>
                         </section>
                         <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
-                        </section>
-                    </div>
-                </li>
-            </ul>
-            <ul class="main__content__found__house">
-                <li>
-                    <img src="img/about-houseLower.png" alt="">
-                    <div class="main__content__found__about-house">
-                        <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
-                            <a href="aboutProject.html">
-                                <button class="btn">Описание проекта</button>
-                            </a>
-                        </section>
-                        <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
-                        </section>
-                    </div>
-                </li>
-            </ul>
-            <ul class="main__content__found__house">
-                <li>
-                    <img src="img/about-houseLower.png" alt="">
-                    <div class="main__content__found__about-house">
-                        <section class="main__content__found__about-house__left-side">
-                            <p class="size main__content__found__about-house__text-bold">130 м2</p>
-                            <p class="main__content__found__about-house__text">4 комнаты</p>
-                            <p class="main__content__found__about-house__text">1 санузел</p>
-                            <p class="main__content__found__about-house__text-bold">2 500 000 руб.</p>
-                            <a href="aboutProject.html">
-                                <button class="btn">Описание проекта</button>
-                            </a>
-                        </section>
-                        <section class="main__content__found__about-house__right-side">
-                            <p class="main__content__found__about-house__text-bold">Проект «Древо»</p>
-                            <p class="main__content__found__about-house__text">2 этажа</p>
-                            <p class="main__content__found__about-house__text">30 дней</p>
-                            <button onclick="feedBack()" class="btn">Условия покупки</button>
+                            <p class="main__content__found__about-house__text-bold">Проект «Европа»</p>
+                            <p class="main__content__found__about-house__text">2 этаж</p>
+                            <p class="main__content__found__about-house__text">60 дней</p>
+                            <button onclick="feedBack()" class=" btn">Условия покупки</button>
                         </section>
                     </div>
                 </li>
@@ -475,13 +387,12 @@
 </main>
 <footer class="footer">
     <div class="container footer__content">
-        <h1 class="logo footer__content__logo">ECOHAUS</h1>
+        <a href="index.html"><h1 class="logo footer__content__logo">ECOHAUS</h1></a>
         <ul>
-            <li><a class="footer__content__nav" href="#">Компания</a></li>
-            <li><a class="footer__content__nav" href="#">Проекты</a></li>
-            <li><a class="footer__content__nav" href="#">Цены и комплектации</a></li>
-            <li><a class="footer__content__nav" href="#">Новости</a></li>
-            <li><a class="footer__content__nav" href="#">Контакты</a></li>
+            <li><a class="footer__content__nav" href="index.html">Компания</a></li>
+            <li><a class="footer__content__nav" href="projects.html">Проекты</a></li>
+            <li><a class="footer__content__nav" href="price.html">Цены и комплектации</a></li>
+            <li><a class="footer__content__nav" href="contact.html">Контакты</a></li>
         </ul>
         <img src="img/whitePhone.svg" alt="cell-phone">
         <p class="footer__content__phone-number">+7 (800) 800 80 80</p>
@@ -489,5 +400,6 @@
     </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/validation.js"></script>
 </body>
 </html>

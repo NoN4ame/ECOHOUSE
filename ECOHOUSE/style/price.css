@@ -57,7 +57,7 @@
   background-color: transparent;
   color: #3a3a3a;
   border-color: #3a3a3a;
-  padding: 0 4px 3px 0;
+  padding: 0px;
   width: 200px;
   height: 50px;
 }
@@ -180,56 +180,6 @@
   outline: none;
 }
 
-.price-range-field {
-  font-size: 18px;
-  font-weight: bold;
-  color: #3a3a3a;
-  outline: none;
-  border: none;
-  cursor: default;
-  position: relative;
-}
-.price-range-field:first-child {
-  left: 80px;
-}
-.price-range-field:last-child {
-  left: 428px;
-}
-
-.ui-slider {
-  position: relative;
-}
-
-.ui-slider .ui-slider-handle {
-  position: absolute;
-  z-index: 2;
-  width: 7px;
-  height: 7px;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid #3a3a3a;
-  top: -4px;
-}
-.ui-slider .ui-slider-handle:focus {
-  outline: none;
-}
-
-.ui-slider-horizontal, ui-slider-range {
-  height: 1px;
-  background-color: #cecece;
-  width: 303px;
-  bottom: 11px;
-  left: 255px;
-}
-
-.ui-widget-header {
-  height: 3px;
-  background: #333333;
-  color: #333333;
-  font-weight: bold;
-  position: relative;
-}
-
 .footer {
   background-color: #3a3a3a;
 }
@@ -253,7 +203,7 @@
 }
 .footer__content img {
   position: relative;
-  left: 55px;
+  left: 85px;
 }
 .footer__content__nav {
   font-size: 16px;
@@ -295,6 +245,16 @@ input[type=number] {
   font-family: "Roboto", sans-serif;
 }
 
+small.error {
+  display: none;
+  margin: 0 0 10px;
+  color: #d32f2f;
+}
+
+.error_val > small.error {
+  display: block;
+}
+
 .container {
   width: 1480px;
   margin: 0 auto;
@@ -332,6 +292,57 @@ input[type=number] {
 .logo > a {
   text-decoration: none;
   color: #3a3a3a;
+}
+
+.price-range-field {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a3a3a;
+  outline: none;
+  border: none;
+  cursor: default;
+  position: relative;
+  width: 206px;
+}
+.price-range-field:first-child {
+  left: 80px;
+}
+.price-range-field:last-child {
+  left: 333px;
+}
+
+.ui-slider {
+  position: relative;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #3a3a3a;
+  top: -4px;
+}
+.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+.ui-slider-horizontal, ui-slider-range {
+  height: 1px;
+  background-color: #cecece;
+  width: 303px;
+  bottom: 11px;
+  left: 255px;
+}
+
+.ui-widget-header {
+  height: 3px;
+  background: #333333;
+  color: #333333;
+  font-weight: bold;
+  position: relative;
 }
 
 .sections {
@@ -432,6 +443,7 @@ input[type=number] {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+  width: 44px;
 }
 
 .main__content__sortBy {
@@ -523,6 +535,57 @@ input[type=number] {
   margin-top: 61px;
 }
 
+.price-range-field {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a3a3a;
+  outline: none;
+  border: none;
+  cursor: default;
+  position: relative;
+  width: 206px;
+}
+.price-range-field:first-child {
+  left: 80px;
+}
+.price-range-field:last-child {
+  left: 333px;
+}
+
+.ui-slider {
+  position: relative;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #3a3a3a;
+  top: -4px;
+}
+.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+.ui-slider-horizontal, ui-slider-range {
+  height: 1px;
+  background-color: #cecece;
+  width: 303px;
+  bottom: 11px;
+  left: 255px;
+}
+
+.ui-widget-header {
+  height: 3px;
+  background: #333333;
+  color: #333333;
+  font-weight: bold;
+  position: relative;
+}
+
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
@@ -535,6 +598,16 @@ input[type=number] {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+small.error {
+  display: none;
+  margin: 0 0 10px;
+  color: #d32f2f;
+}
+
+.error_val > small.error {
+  display: block;
 }
 
 .container {
@@ -635,7 +708,7 @@ input[type=number] {
   background-color: transparent;
   color: #3a3a3a;
   border-color: #3a3a3a;
-  padding: 0 4px 3px 0;
+  padding: 0px;
   width: 200px;
   height: 50px;
 }
@@ -758,56 +831,6 @@ input[type=number] {
   outline: none;
 }
 
-.price-range-field {
-  font-size: 18px;
-  font-weight: bold;
-  color: #3a3a3a;
-  outline: none;
-  border: none;
-  cursor: default;
-  position: relative;
-}
-.price-range-field:first-child {
-  left: 80px;
-}
-.price-range-field:last-child {
-  left: 428px;
-}
-
-.ui-slider {
-  position: relative;
-}
-
-.ui-slider .ui-slider-handle {
-  position: absolute;
-  z-index: 2;
-  width: 7px;
-  height: 7px;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid #3a3a3a;
-  top: -4px;
-}
-.ui-slider .ui-slider-handle:focus {
-  outline: none;
-}
-
-.ui-slider-horizontal, ui-slider-range {
-  height: 1px;
-  background-color: #cecece;
-  width: 303px;
-  bottom: 11px;
-  left: 255px;
-}
-
-.ui-widget-header {
-  height: 3px;
-  background: #333333;
-  color: #333333;
-  font-weight: bold;
-  position: relative;
-}
-
 .footer {
   background-color: #3a3a3a;
 }
@@ -831,7 +854,7 @@ input[type=number] {
 }
 .footer__content img {
   position: relative;
-  left: 55px;
+  left: 85px;
 }
 .footer__content__nav {
   font-size: 16px;
@@ -871,6 +894,16 @@ input[type=number] {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+small.error {
+  display: none;
+  margin: 0 0 10px;
+  color: #d32f2f;
+}
+
+.error_val > small.error {
+  display: block;
 }
 
 .container {
