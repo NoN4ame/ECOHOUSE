@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="feedBack">
+    <h1>Оставьте заявку, и с Вами свяжется нам менеджер</h1>
+    <button onclick="closeForm()" class="feedBack__close-form"><img src="img/close.svg" alt="#"></button>
+    <form action="#">
+        <ul>
+            <li>
+                <label id="name">
+                    <input class="feedBack__enterText" name="name" type="text" placeholder="Имя">
+                    <small class="error">Имя должно содержать только буквы</small>
+                </label>
+            </li>
+            <li>
+                <label id="phone">
+                    <input class="feedBack__enterText" name="phone" type="number" placeholder="Номер телефона">
+                    <small class="error">Введите номер в формате +7(000)000-00-00</small>
+                </label>
+            </li>
+            <li><input class="feedBack__checkbox" id="check" type="checkbox">
+                <label for="check">Я согласен с условиями конфиденциальности</label>
+            </li>
+            <li>
+                <button class="feedBack__btn">Записаться на просмотр</button>
+            </li>
+        </ul>
+    </form>
+</div> <!-- Форма обратной связи(Скрыта) -->
+<!-- Основной контент страницы -->
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <section class="header__content__left">
+                <a href="index.html"><h1 class="logo header__content__logo">ECOHAUS</h1></a>
+                <ul>
+                    <li><a class="header__content__nav" href="index.html">Компания</a></li>
+                    <li><a class="header__content__nav" href="projects.html">Проекты</a></li>
+                    <li><a class="header__content__nav" href="price.html">Цены и комплектации</a></li>
+                    <li><a class="header__content__nav" href="contact.html">Контакты</a></li>
+                </ul>
+            </section>
+            <section class="header__content__right">
+                <img src="img/blackPhone.svg" alt="cell-phone">
+                <p class="header__content__right__phone-number">+7 (800) 800 80 80</p>
+                <button onclick="feedBack()" class="btn header__content__right__btn">Связаться с нами</button>
+            </section>
+        </div>
+        <div class="bread-crumbs">
+            <a href="index.html">Главная</a><span></span>
+            <a href="contact.html"> Контакты</a>
+        </div>
+    </div>
+</header>
+<div class="container main__content__contacts">
+    <h1 class="headers">Контакты</h1>
+    <ul>
+        <li class="main__content__contacts__upper">Телефон
+            <ul>
+                <li class="main__content__contacts__lower">+7 (800) 800 80 80</li>
+            </ul>
+        </li>
+        <li class="main__content__contacts__upper">Режим работы
+            <ul>
+                <li class="main__content__contacts__lower">Пн-Пт с 8:00 до 20:00 <br>
+                    Сб-Вс с 10:00 до 18:00
+                </li>
+            </ul>
+        </li>
+        <li class="main__content__contacts__upper">Электронная почта
+            <ul>
+                <li class="main__content__contacts__lower">ecohausinfo@mail.ru</li>
+            </ul>
+        </li>
+        <li class="main__content__contacts__upper">Социальные сети
+            <ul>
+                <li class="main__content__contacts__lower">
+                    <a href="https://twitter.com/"><img src="img/twitterContacts.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="img/instagramContacts.jpg" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="img/facebookContacts.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="img/youtubeContacts.jpg" alt=""></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="container2 main__content__map">
+    <h1 class="headers">Карта проезда</h1>
+    <a href="https://www.google.com/maps/place/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%9F%D0%B5%D1%85%D1%80%D0%B0+-+%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5,+%D0%9B%D0%B5%D0%BE%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+143900/@55.797554,37.929132,5027m/data=!3m1!1e3!4m5!3m4!1s0x414acc72995d626b:0x7870eb913c311338!8m2!3d55.7897904!4d37.9506259?hl=ru"
+       target="_blank">
+        <img src="img/map.jpg" alt="map">
+    </a>
+    <ul>
+        <li><p><b>Офис:</b> Москва, ул. Радио 24к1, офис 401, БЦ Яуза Тауэрс</p></li>
+        <li>
+            <a href="https://www.google.com/maps/place/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%9F%D0%B5%D1%85%D1%80%D0%B0+-+%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5,+%D0%9B%D0%B5%D0%BE%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+143900/@55.797554,37.929132,5027m/data=!3m1!1e3!4m5!3m4!1s0x414acc72995d626b:0x7870eb913c311338!8m2!3d55.7897904!4d37.9506259?hl=ru"
+               target="_blank"><button class="btn">Построить маршрут</button></a>
+        </li>
+    </ul>
+</div>
+<footer class="footer">
+    <div class="container footer__content">
+        <a href="index.html"><h1 class="logo footer__content__logo">ECOHAUS</h1></a>
+        <ul>
+            <li><a class="footer__content__nav" href="index.html">Компания</a></li>
+            <li><a class="footer__content__nav" href="projects.html">Проекты</a></li>
+            <li><a class="footer__content__nav" href="price.html">Цены и комплектации</a></li>
+            <li><a class="footer__content__nav" href="contact.html">Контакты</a></li>
+        </ul>
+        <img src="img/whitePhone.svg" alt="cell-phone">
+        <p class="footer__content__phone-number">+7 (800) 800 80 80</p>
+        <button onclick="feedBack()" class="btn footer__content__btn">Связаться с нами</button>
+    </div>
+</footer>
+<script src="js/validation.js"></script>
+</body>
+</html>

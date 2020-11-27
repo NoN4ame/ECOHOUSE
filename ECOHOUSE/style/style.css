@@ -21,7 +21,7 @@
 }
 .footer__content img {
   position: relative;
-  left: 55px;
+  left: 85px;
 }
 .footer__content__nav {
   font-size: 16px;
@@ -61,6 +61,16 @@ input[type=number] {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+small.error {
+  display: none;
+  margin: 0 0 10px;
+  color: #d32f2f;
+}
+
+.error_val > small.error {
+  display: block;
 }
 
 .container {
@@ -508,7 +518,7 @@ small.error {
   width: 355px;
   outline: none;
   padding-bottom: 9px;
-  margin-bottom: 39px;
+  margin-bottom: 7.5px;
   font-size: 14px;
   color: #3a3a3a;
   background-color: transparent;
@@ -607,7 +617,7 @@ small.error {
   justify-content: space-between;
   margin: 28px 60px 0 60px;
 }
-.main__content__map ul > li > .btn:hover {
+.main__content__map ul > li > a > .btn:hover {
   background-color: #3a3a3a;
   color: #FFFFFF;
   border-color: #FFFFFF;
