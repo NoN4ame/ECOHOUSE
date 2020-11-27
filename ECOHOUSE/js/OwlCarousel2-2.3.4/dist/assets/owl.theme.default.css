@@ -16,7 +16,7 @@
 .owl-stage {
   display: flex;
   transition: all 0.25ms ease 0s ;
-  width: 0 ;
+  width: 0 !important;
 
 }
 .owl-theme .owl-nav {
