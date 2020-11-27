@@ -345,7 +345,7 @@ small.error {
   justify-content: space-between;
   margin: 28px 60px 0 60px;
 }
-.main__content__map ul > li > .btn:hover {
+.main__content__map ul > li > a > .btn:hover {
   background-color: #3a3a3a;
   color: #FFFFFF;
   border-color: #FFFFFF;
