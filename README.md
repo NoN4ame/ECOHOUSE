@@ -30,5 +30,5 @@
 -Проект «Рубин»<br>
 
 Фильтрация осуществляется по data-атрибутам(решил попробовать через data, но понимаю, что эффективней через массивы).<br>
-Проект проверен в бразуерах: (Opera, Google Chrome, Mozilla Firefox, Microsoft Edge, Yandex Browser)
+Проект проверен в бразуерах: (Opera, Google Chrome, Mozilla Firefox, Microsoft Edge, Yandex Browser).<br>
 Проект не адаптирован
